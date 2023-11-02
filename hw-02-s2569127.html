@@ -490,7 +490,49 @@ complete the race) in the 10 Mile event than in the 5K event.</p>
 </div>
 <div id="exercise-3" class="section level2">
 <h2>Exercise 3</h2>
-<pre class="r"><code># Write your code to answer exercise 3 here</code></pre>
+<pre class="r"><code># Write your code to answer exercise 3 here
+
+run17 %&gt;% filter(event == &quot;10 Mile&quot;) %&gt;%
+          mutate(clock_net = clock_sec - net_sec) %&gt;%
+          filter(clock_net &lt;= 180)</code></pre>
+<pre><code>## # A tibble: 1,409 × 10
+##      bib name       sex     age city  net_sec clock_sec pace_sec event clock_net
+##    &lt;int&gt; &lt;chr&gt;      &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt;
+##  1     6 Hiwot G.   F        21 Ethi…    3217      3217      321 10 M…         0
+##  2    22 Buze D.    F        22 Ethi…    3232      3232      323 10 M…         0
+##  3    16 Gladys K.  F        31 Kenya    3276      3276      327 10 M…         0
+##  4     4 Mamitu D.  F        33 Ethi…    3285      3285      328 10 M…         0
+##  5    20 Karolina … F        35 Pola…    3288      3288      328 10 M…         0
+##  6     8 Firehiwot… F        33 Ethi…    3316      3316      331 10 M…         0
+##  7    18 Tara W.    F        27 Port…    3334      3334      333 10 M…         0
+##  8    24 Nancy N.   F        21 Kenya    3357      3357      335 10 M…         0
+##  9    44 Hannah D.  F        26 Sara…    3359      3359      335 10 M…         0
+## 10    30 Susanna S. F        26 Rest…    3372      3372      337 10 M…         0
+## # ℹ 1,399 more rows</code></pre>
+<pre class="r"><code>run17 %&gt;% filter(event == &quot;10 Mile&quot;) %&gt;%
+          mutate(clock_net = clock_sec - net_sec) %&gt;%
+          filter(clock_net &gt;= 1380)</code></pre>
+<pre><code>## # A tibble: 1,664 × 10
+##      bib name       sex     age city  net_sec clock_sec pace_sec event clock_net
+##    &lt;int&gt; &lt;chr&gt;      &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt;
+##  1 11626 Megan S.   F        23 Wash…    4491      5928      449 10 M…      1437
+##  2 20712 Julianne … F        30 Wash…    4632      6074      463 10 M…      1442
+##  3 22188 Kylie L.   F        26 Arli…    4677      6127      467 10 M…      1450
+##  4  3341 Amanda A.  F        27 Newt…    4706      6146      470 10 M…      1440
+##  5 20886 Monique Y. F        38 Wash…    4760      6273      476 10 M…      1513
+##  6 19196 Anya K.    F        21 Oakl…    4840      6244      484 10 M…      1404
+##  7 21529 Sarah C.   F        31 Silv…    4882      6286      488 10 M…      1404
+##  8 21554 Angie E.   F        43 Rest…    4900      6415      490 10 M…      1515
+##  9  3084 Casey H.   F        29 New …    4925      6365      492 10 M…      1440
+## 10  3034 Maureen K. F        43 Beth…    5012      6453      501 10 M…      1441
+## # ℹ 1,654 more rows</code></pre>
+<pre class="r"><code>First_wave = run17 %&gt;%  filter(event == &quot;10 Mile&quot;) %&gt;%
+          mutate(clock_net = clock_sec - net_sec) %&gt;%
+          filter(clock_net &gt;= 1380)
+
+Last_wave = run17 %&gt;% filter(event == &quot;10 Mile&quot;) %&gt;%
+          mutate(clock_net = clock_sec - net_sec) %&gt;%
+          filter(clock_net &gt;= 1380)</code></pre>
 </div>
 <div id="exercise-4" class="section level2">
 <h2>Exercise 4</h2>

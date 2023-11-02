@@ -102,10 +102,21 @@ The female runners have a higher median than the male runners in the 10 Mile eve
 ```{r ex3, out.width = "80%"}
 # Write your code to answer exercise 3 here
 
+run17 %>% filter(event == "10 Mile") %>%
+          mutate(clock_net = clock_sec - net_sec) %>%
+          filter(clock_net <= 180)
 
+run17 %>% filter(event == "10 Mile") %>%
+          mutate(clock_net = clock_sec - net_sec) %>%
+          filter(clock_net >= 1380)
 
+First_wave = run17 %>%  filter(event == "10 Mile") %>%
+          mutate(clock_net = clock_sec - net_sec) %>%
+          filter(clock_net >= 1380)
 
-
+Last_wave = run17 %>% filter(event == "10 Mile") %>%
+          mutate(clock_net = clock_sec - net_sec) %>%
+          filter(clock_net >= 1380)
 
 
 ```
