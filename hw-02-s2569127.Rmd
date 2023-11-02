@@ -72,14 +72,9 @@ In the 5K event there were less runners under 20. In the 5K event there was only
 ```{r ex2, out.width = "80%"}
 # Write your code to answer exercise 2a here
 
-library(lubridate)
-run17 %>% mutate(minute(seconds_to_period(net_sec)))
-
-
-
 ggplot(data = run17,
        mapping = aes(
-         x = minute(seconds_to_period(net_sec)),
+         x = net_sec/60,
         y = event
        )) + 
   geom_boxplot() + 
@@ -106,6 +101,8 @@ The female runners have a higher median than the male runners in the 10 Mile eve
 
 ```{r ex3, out.width = "80%"}
 # Write your code to answer exercise 3 here
+
+
 
 
 
