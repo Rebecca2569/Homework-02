@@ -72,12 +72,32 @@ In the 5K event there were less runners under 20. In the 5K event there was only
 ```{r ex2, out.width = "80%"}
 # Write your code to answer exercise 2a here
 
+library(lubridate)
+run17 %>% mutate(minute(seconds_to_period(net_sec)))
+
+
+
+ggplot(data = run17,
+       mapping = aes(
+         x = minute(seconds_to_period(net_sec)),
+        y = event
+       )) + 
+  geom_boxplot() + 
+  labs(
+    x = "time to complete race (minutes)" ,
+    y = "event" , 
+    
+    title = "The time it took the runners to complete the event"
+  ) +
+  facet_grid(event ~ sex,
+             scale = "free")
 
 
 
 ```
 
-_Write your text to answer exercise 2b here (Please delete this message before submission!)_
+#2b
+The female runners have a higher median than the male runners in the 10 Mile event. The female runners again have a slightly higher median than the male runners in the 5K event. The difference in the median between males and females in greater in the 10 Mile event than in the 5K event. There was a wider range of results (the time taken to complete the race) in the 10 Mile event than in the 5K event.
 
 
 
