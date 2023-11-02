@@ -24,23 +24,47 @@ run17 %>%
   filter(event == "10 Mile") %>%
   ggplot(mapping = aes(x = age)) +
     geom_histogram(binwidth = 2)
+
+#statistics calculations code
+
+run17%>% filter(event == "10 Mile") %>%
+         filter(age <20)
+
+run17 %>% filter(event == "10 Mile") %>%
+         filter( age > 75)
+
+run17 %>% filter(event == "10 Mile") %>%
+          summarise( min_age = min(age),
+                    max_age = max(age))
+  
 ```
 
 
-_Write your text to answer exercise 1a here (Please delete this message before submission!)_
+#1a
+There is very few runners aged below 20,only 169, the majority of runners are aged between early 20's to late 40's, shown by a mean of 37. There is a steady decrease of runners past the age 42 until very few run at the oldest age of 85. The youngest runner was 11 and the oldest runner was 85.  
 
 
 ```{r ex1b, out.width="80%"}
 # Write your code for Ex1b here
+run17 %>%
+  filter(event == "5K") %>%
+  ggplot(mapping = aes(x = age)) +
+    geom_histogram(binwidth = 2)
 
+#statistics calculations code
 
+run17 %>% filter(event == "5K") %>% 
+  filter(age < 20) %>%
+  arrange(desc(age))
 
-
+run17%>% filter(event == "5K") %>% 
+         filter(age>75)
 
 ```
 
 
-_Write your text to answer exercise 1b here (Please delete this message before submission!)_
+#1b
+In the 5K event there were less runners under 20. In the 5K event there was only 110 runners under 20 compared to 169 runners in the 10 Mile event. In the 5K event there were a lot fewer runners who were over the age of 75. In the 10 Mile event there was 11 runners aged over 75 compared to only 7 runners in the 5K event. The youngest in the 5K run was 6, however the youngest runner in the 10 Mile run was 11. The oldest runner in the 5K event was 92, however the oldest runner in the 10 Mile event was 85. This means that the 5K event had the oldest and youngest runner. The majority if runners in both the 5K event and the 10 Mile event were aged between 20 and 40. In the 5K event there were a lot less runners who attended, only 2519, compared to 17442 runners in the 10 Mile event. 
 
 
 ## Exercise 2
