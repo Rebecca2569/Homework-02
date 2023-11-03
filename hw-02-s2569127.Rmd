@@ -127,41 +127,42 @@ Last_wave = run17 %>% filter(event == "10 Mile") %>%
 
 ## Exercise 4
 
-#### Example of a good data visualisation
+#### Example of a bad data visualisation
 
 ```{r ex4_good_viz, echo = FALSE, out.width = "80%"}
 # edit the file path accordingly
-knitr::include_graphics("img/good_viz.png")
+knitr::include_graphics("img/Image 1.png") 
+
 ```
 
-_Edit the text below by replacing the bold text with the appropriate information to provide a reference for your image (Please delete this message before submission!)_
+Image 1 is taken from a news article which is about global warming. 
 
-**Author/Organisation**, "**Title of website**" [Online]. Available at: **URL** (Accessed: **day month year**)
-
-
-The above image presents a good data visualisation because:
-
--   _Reason 1_
--   _Reason 2_
-
-
-#### Example of a bad data visualisation
-
-
-```{r ex4_bad_viz, echo = FALSE, out.width = "80%"}
-# edit the file path accordingly
-knitr::include_graphics("img/bad_viz.png")
-```
-
-_Edit the text below by replacing the bold text with the appropriate information to provide a reference for your image (Please delete this message before submission!)_
-
-**Author/Organisation**, "**Title of website**" [Online]. Available at: **URL** (Accessed: **day month year**)
-
+Matt McGrath/BBC, "Carbon emissions threaten 1.5C climate threshold sooner than thought - report" [Online]. Available at: https://www.bbc.co.uk/news/science-environment-67242386 (Accessed: 03 NOvember 2023)
 
 
 The above image presents a bad data visualisation because:
 
--   _Reason 1_
--   _Reason 2_
+-   _Reason 1_ The reader cannot read any of the data specifically. This fault shows that it is a bad visualisation as it does not respect the people. There is too much data for the visualisation to be readable.  
+-   _Reason 2_ The years cannot be distinguished by the reader. This fault shows that it is a bad visualisation as it does not respect the data
+
+
+#### Example of a good data visualisation
+
+
+```{r ex4_bad_viz, echo = FALSE, out.width = "80%"}
+# edit the file path accordingly
+knitr::include_graphics("img/Image 2.png")
+```
+
+Image 2 is take from a news article about interest rates. 
+
+ Kevin Peachey/BBC, "Interest rates: How the Bank of England's decision affects you and your money" [Online]. Available at: https://www.bbc.co.uk/news/business-57764601 (Accessed: 03 November 2023)
+
+
+
+The above image presents a good data visualisation because:
+
+-   _Reason 1_ The reader can easy read the information, as it is clear and straightforward, showing that it respects the people. The reader needs very little knowlegde of graphs to understand the visualisation. 
+-   _Reason 2_ The visualisation has accurate and correct axis, showing a respect for data. The visualisation also respects the mathematics as the axis use an equal integer between the values. 
 
 
